@@ -9,6 +9,8 @@ from datetime import datetime, timedelta
 # Définition des classes
 ########################
 
+#j'ai rien changé aux codes a part ça :) 
+
 class Produit:
     def __init__(self, numEAN, identifiant, nom, prixBase, dateFabrication):
         self.numEAN = numEAN
