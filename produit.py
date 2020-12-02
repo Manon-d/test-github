@@ -34,16 +34,11 @@ class Produit:
         return chaine
         
 class ProduitPerissable(Produit):
-    def __init__(self,  numEAN, identifiant, nom, prixBase, dateFabrication, dureeConso):
-		self.numEAN = numEAN
-        self.id = identifiant
-        self.nom = nom
-        self.prixBase = prixBase
-        self.dateFab = datetime.strptime(dateFabrication, "%d/%m/%Y")
-        self.dureeConso = timedelta(int(dureeConso))
+    def __init__(self,  numEAN, identifiant, nom, prixBase, dateFabrication, dureeConso)
+        super().__init__(numEAN, identifiant, nom, prixBase, dateFabrication)
+     	self.dureeConso= timedelta(days=dureeConso)
+        self.intituleProduit= {self.numEAN : self.nom}
     
-    def enPromo(self):
-        return (datetime.now()-self.dateFab) >= self.dureeConso*0.75
         
     def dernierJour(self):
         return (datetime.now()-self.dateFab).days == self.dureeConso.days - 1
