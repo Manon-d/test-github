@@ -35,7 +35,7 @@ class Produit:
         
 class ProduitPerissable(Produit):
     def __init__(self,  numEAN, identifiant, nom, prixBase, dateFabrication, dureeConso)
-        super().__init__(numEAN, identifiant, nom, prixBase, dateFabrication)
+        Produit.__init__(self,numEAN, identifiant, nom, prixBase, dateFabrication)
      	self.dureeConso= timedelta(days=dureeConso)
         self.intituleProduit= {self.numEAN : self.nom} 
         # reduction de l'écriture
