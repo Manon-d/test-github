@@ -37,7 +37,7 @@ class Produit:
         
 class ProduitPerissable(Produit):
     def __init__(self,  numEAN, identifiant, nom, prixBase, dateFabrication, dureeConso):
-		self.numEAN = numEAN
+	self.numEAN = numEAN
         self.id = identifiant
         self.nom = nom
         self.prixBase = prixBase
